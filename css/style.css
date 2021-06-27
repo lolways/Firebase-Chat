@@ -40,6 +40,10 @@ a {
 
 /* Chat Page */
 
+.chat-box{
+	background-color:gray
+}
+
 .chat-container {
 	max-width: 1100px;
 	background: rgb(124, 123, 123);
@@ -49,7 +53,7 @@ a {
 
 .chat-header {
 	background: var(--dark-color-a);
-	color: #fff;
+	color: rgb(0, 0, 0);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
@@ -65,14 +69,13 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: #e4dcdc;
+	color: #000000;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
 
 .chat-sidebar h2 {
 	font-size: 20px;
-	background: #fa000d0b;
 	padding: 10px;
 	margin-bottom: 20px;
 }
@@ -89,12 +92,13 @@ a {
 	padding: 30px;
 	max-height: 500px;
 	overflow-y: scroll;
+	background-color: black;
 }
 
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: rgb(199, 197, 197);
+	background-color: gray;
 	border-radius: 5px;
 }
 
@@ -130,7 +134,7 @@ a {
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 .join-header {
