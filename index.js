@@ -106,7 +106,59 @@ window.onload = function (){
             container.append(load_container)
         }
         
+        //creacion de chat
+        create_chat(){
+            
+            var parent = this;
+            
+            var title_container = document.getElementById('title_container')
+            var title = document.getElementById('title')
+            title_container.classList.add('chat_title_container')
+            
+            title.classList.add('chat_title')
+      
+            var chat_container = document.createElement('div')
+            chat_container.setAttribute('id', 'chat_container')
+      
+            var chat_inner_container = document.createElement('div')
+            chat_inner_container.setAttribute('id', 'chat_inner_container')
+      
+            var chat_content_container = document.createElement('div')
+            chat_content_container.setAttribute('id', 'chat_content_container')
+      
+            var chat_input_container = document.createElement('div')
+            chat_input_container.setAttribute('id', 'chat_input_container')
+      
+            var chat_input_send = document.createElement('button')
+            chat_input_send.setAttribute('id', 'chat_input_send')
+            chat_input_send.setAttribute('disabled', true)
+            chat_input_send.innerHTML = `<i class="far fa-paper-plane"></i>`
+      
+            var chat_input = document.createElement('input')
+            chat_input.setAttribute('id', 'chat_input')
+            
+            //largo del mensaje
+            chat_input.setAttribute('maxlength', 1000)
+            
+            // obtener el nombre del usuario
+            chat_input.placeholder = `${parent.get_name()}. Say something...`
+            chat_input.onkeyup  = function(){
+              if(chat_input.value.length > 0){
+                chat_input_send.removeAttribute('disabled')
+                chat_input_send.classList.add('enabled')
+                chat_input_send.onclick = function(){
+                  
+                    chat_input_send.setAttribute('disabled', true)
+                    chat_input_send.classList.remove('enabled')
+                 
+                    if(chat_input.value.length <= 0){
+                        return
+                     }
+                    }
+                }
+            }
+            };
 
-
+            
       }
-}
+ }
