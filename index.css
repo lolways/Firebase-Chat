@@ -133,7 +133,6 @@ body{
   
     float: left;
     overflow-y: auto;
-    font-family: Varela Round;
   
     padding-left: 15px;
     padding-right: 15px;
@@ -148,7 +147,6 @@ body{
   
     padding-left: 15px;
     padding-right: 15px;
-    font-family: Varela Round;
     margin-top: 10px;
   }
   #chat_input{

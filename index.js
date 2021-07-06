@@ -1,15 +1,13 @@
 window.onload = function (){
     //configuracion de firebase
     var firebaseConfig = {
-        apiKey: "AIzaSyCJcvP96Yp4mflATereZ9WmLHMd3hCLTXY",
-        authDomain: "blessed-chat-588b7.firebaseapp.com",
-        databaseURL: "https://blessed-chat-588b7-default-rtdb.firebaseio.com",
-        projectId: "blessed-chat-588b7",
-        storageBucket: "blessed-chat-588b7.appspot.com",
-        messagingSenderId: "21934670709",
-        appId: "1:21934670709:web:417c39319cd6109076893c"
+        apiKey: "AIzaSyAX9XTtxzdV7ccU2SAc4o8HobqwXEgQ_rM",
+        authDomain: "blessed-chat-b3d1a.firebaseapp.com",
+        projectId: "blessed-chat-b3d1a",
+        storageBucket: "blessed-chat-b3d1a.appspot.com",
+        messagingSenderId: "494986571880",
+        appId: "1:494986571880:web:5c75df5fa3f99e588ecbdd"
       };
-
       //inicializacion
       firebase.initializeApp(firebaseConfig);
 
