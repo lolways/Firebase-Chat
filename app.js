@@ -1,12 +1,12 @@
 window.onload = function (){
     //configuracion de firebase
     var firebaseConfig = {
-        apiKey: "AIzaSyAX9XTtxzdV7ccU2SAc4o8HobqwXEgQ_rM",
-        authDomain: "blessed-chat-b3d1a.firebaseapp.com",
-        projectId: "blessed-chat-b3d1a",
-        storageBucket: "blessed-chat-b3d1a.appspot.com",
-        messagingSenderId: "494986571880",
-        appId: "1:494986571880:web:5c75df5fa3f99e588ecbdd"
+        apiKey:"********************",
+        authDomain: "*************************",
+        projectId: "**********************",
+        storageBucket: "********************",
+        messagingSenderId: "************",
+        appId: "**********"
       };
       //inicializacion
       firebase.initializeApp(firebaseConfig);
