@@ -1,6 +1,6 @@
 window.onload = function (){
     //configuracion de firebase
-    const firebaseConfig = {
+    var firebaseConfig = {
         apiKey: "AIzaSyCJcvP96Yp4mflATereZ9WmLHMd3hCLTXY",
         authDomain: "blessed-chat-588b7.firebaseapp.com",
         databaseURL: "https://blessed-chat-588b7-default-rtdb.firebaseio.com",
@@ -11,7 +11,7 @@ window.onload = function (){
       };
 
       //inicializacion
-      firebase.initializeApp(firebaseConfig)
+      firebase.initializeApp(firebaseConfig);
 
       //base de datos 
       var db = firebase.database()
@@ -274,10 +274,35 @@ window.onload = function (){
                             var message = data.message
                             
                             var message_container = document.createElement('div')
+                            message_container.setAttribute('class','message_container')
 
+                            var message_inner_container = document.createElement('div')
+                            message_inner_container.setAttribute('class','message_inner_container')
 
-                        })
+                            var message_user_container = document.createElement('div')
+                            message_user_container.setAttribute('class','message_user_container')
 
+                            var message_user = document.createElement('p')
+                            message_user.setAttribute('class','message_user')
+                            message_user.textContent = `${name}`
+
+                            var message_content_container = document.createElement('div')
+                            message_content_container.setAttribute('class','message_content_container')
+
+                            var message_content = document.createElement('p')
+                            message_content.setAttribute('class', 'message_content')
+                            message_content.textContent = `${message}`
+
+                            message_user_container.append(message_user)
+                            message_content_container.append(message_content)
+                            message_inner_container.append(message_user_container, message_content_container)
+                            message_container.append(message_inner_container)
+
+                            chat_content_container.append(message_container)
+
+                        });
+
+                        chat_content_container.scrollTop = chat_content_container.scrollHeight;
                         
                     })
                 })
@@ -285,6 +310,15 @@ window.onload = function (){
         }
 
 
+
+      }
+
+      //hacer la app
+      var app = new blessedchat()
+
+      //ir a home 
+      if(app.get_name() != null){
+          app.chat()
 
       }
 }
